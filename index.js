@@ -6,7 +6,7 @@ const { AlfenModbusClient, REG } = require('./lib/alfen-modbus');
 
 const PLUGIN_NAME = 'homebridge-alfen-eve-modbus';
 const PLATFORM_NAME = 'AlfenEveModbus';
-const DEFAULT_NAME = 'Alfen Eve laadpaal';
+const DEFAULT_NAME = 'Alfen Eve charger';
 
 // The charger falls back to its safe current (0 A) when no setpoint arrives within the
 // validity time (60 s by default). We refresh well inside that window.
