@@ -10,6 +10,18 @@ HomeKit-schakelaar die het laden op een **Alfen Eve Single S-line** aan- of uitz
 Het setpoint wordt elke `refresh_s` seconden herhaald, omdat de laadpaal anders na de *validity time*
 (standaard 60 s) terugvalt naar de Safe Current.
 
+## Requirements
+
+- **Alfen Eve Single S-line** (of een andere Alfen met ACE) met firmware die de Modbus TCP/IP EMS-functie ondersteunt.
+- **Load Balancing licentie** actief op de laadpaal. Zonder die licentie is er geen Modbus TCP-toegang.
+- **Modbus TCP Smart Charging** ingeschakeld in de ACE-app, met:
+  - Control mode: *Socket*
+  - Validity time: 60 s
+  - Safe current: 0 A
+- **Modbus TCP-server** bereikbaar op poort 502 vanaf de Homebridge-machine.
+- **Homebridge** 1.6 of hoger, **Node.js** 18.15 of hoger.
+- Als de laadpaal in een ander VLAN zit, een firewallregel die TCP 502 toestaat van de Homebridge-machine naar het IP van de laadpaal. Voor de ACE-app is daarnaast een mDNS-reflector nodig.
+
 ## 1. Instellen op de laadpaal (Alfen ACE-app)
 
 Verbind via Bluetooth met de ACE-app en controleer:
@@ -70,3 +82,8 @@ schakelaar dan op **uit** als niemand thuis is en op **aan** bij thuiskomst.
 
 - Laat het IP-adres van de laadpaal vast staan, anders wijst `host` straks nergens meer naar.
 - Dit is een privéproject. Het wijzigt geen instellingen op de laadpaal behalve het setpoint via Modbus.
+
+## License
+
+Copyright © 2026 Michael Suenens — Ancilux Services. All rights reserved.
+Zie [LICENSE](LICENSE). Gebruik, kopiëren of aanpassen zonder schriftelijke toestemming is niet toegestaan.
