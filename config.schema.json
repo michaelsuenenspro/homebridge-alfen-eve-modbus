@@ -2,23 +2,23 @@
   "pluginAlias": "AlfenEveModbus",
   "pluginType": "platform",
   "singular": true,
-  "headerDisplay": "Schakelt het laden op een Alfen Eve Single S-line aan of uit via Modbus TCP. Zet op de laadpaal de Safe Current op 0 A en de Modbus TCP/IP EMS validity time op 60 s (zie README).",
+  "headerDisplay": "Switches charging on an Alfen Eve Single S-line on or off via Modbus TCP. Set the charger's Safe Current to 0 A and the Modbus TCP/IP EMS validity time to 60 s (see the README).",
   "schema": {
     "type": "object",
     "properties": {
       "name": {
-        "title": "Naam",
+        "title": "Name",
         "type": "string",
-        "default": "Alfen Eve laadpaal"
+        "default": "Alfen Eve charger"
       },
       "host": {
-        "title": "IP-adres laadpaal",
+        "title": "Charger IP address",
         "type": "string",
         "required": true,
-        "description": "Vast IP-adres of DHCP-adres van de Alfen (zie je router)."
+        "description": "Fixed or DHCP-reserved IP address of the Alfen (check your router)."
       },
       "port": {
-        "title": "Modbus TCP-poort",
+        "title": "Modbus TCP port",
         "type": "integer",
         "default": 502
       },
@@ -30,19 +30,19 @@
         "maximum": 2
       },
       "max_current_a": {
-        "title": "Maximale stroom als laden is toegestaan (A)",
+        "title": "Maximum current when charging is allowed (A)",
         "type": "integer",
         "default": 16,
         "minimum": 6,
         "maximum": 32
       },
       "refresh_s": {
-        "title": "Herhaal setpoint elke (s)",
+        "title": "Resend setpoint every (s)",
         "type": "integer",
         "default": 20,
         "minimum": 5,
         "maximum": 50,
-        "description": "Moet kleiner zijn dan de validity time op de laadpaal (standaard 60 s)."
+        "description": "Must be lower than the validity time on the charger (default 60 s)."
       }
     }
   }
