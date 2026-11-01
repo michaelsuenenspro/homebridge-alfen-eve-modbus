@@ -1,0 +1,25 @@
+{
+  "name": "homebridge-alfen-eve-modbus",
+  "version": "0.1.0",
+  "description": "HomeKit switch that enables or disables charging on an Alfen Eve Single S-line via Modbus TCP.",
+  "license": "UNLICENSED",
+  "private": true,
+  "main": "index.js",
+  "keywords": [
+    "homebridge-plugin",
+    "homekit",
+    "alfen",
+    "ev-charger",
+    "modbus"
+  ],
+  "engines": {
+    "node": ">=18.15.0",
+    "homebridge": ">=1.6.0"
+  },
+  "scripts": {
+    "test": "node --test test/plugin.test.js"
+  },
+  "dependencies": {
+    "jsmodbus": "^4.0.10"
+  }
+}
