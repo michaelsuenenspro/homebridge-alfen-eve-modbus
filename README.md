@@ -79,5 +79,4 @@ Use the Home app to automate the switch based on presence, for example turning i
 
 ## License
 
-Copyright © 2026 Michael Suenens — Ancilux Services. All rights reserved.
-See [LICENSE](LICENSE). Use, copying or modification without written permission is not allowed.
+MIT License. Copyright © 2026 Michael Suenens — Ancilux Services. See [LICENSE](LICENSE).
