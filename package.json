@@ -1,7 +1,7 @@
 {
   "name": "homebridge-alfen-eve-modbus",
   "displayName": "Alfen Eve Modbus",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "HomeKit switch that enables or disables charging on an Alfen Eve Single S-line via Modbus TCP.",
   "license": "MIT",
   "main": "index.js",
@@ -23,7 +23,10 @@
   "dependencies": {
     "jsmodbus": "^4.0.10"
   },
-  "author": "Michael Suenens — Ancilux Services",
+  "author": {
+    "name": "Michael Suenens",
+    "url": "https://github.com/michaelsuenenspro"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/michaelsuenenspro/homebridge-alfen-eve-modbus.git"
